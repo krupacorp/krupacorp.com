@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>krupa Corporation</title>
+    <!-- style sheet linking  -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fontawaesom cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font import  -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: 1.8em;
+        margin-top: 40px;
+      }
+
+      h3 {
+        font-size: 1.4em;
+        margin-top: 30px;
+      }
+
+      p,
+      ul,
+      ol {
+        margin-bottom: 20px;
+      }
+
+      ul,
+      ol {
+        padding-left: 30px;
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .last-updated {
+        font-style: italic;
+        color: #7f8c8d;
+        margin-top: 40px;
+        text-align: right;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      .highlight {
+        background-color: #fffacd;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        h3 {
+          font-size: 1.2em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 1.8em;
+        }
+
+        h2 {
+          font-size: 1.3em;
+        }
+
+        h3 {
+          font-size: 1.1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      .nav-item.dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-toggle {
+        color: #333;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      /* .dropdown-toggle::after {
+        content: "\25BC";
+        font-size: 0.7em;
+        margin-left: 5px;
+      } */
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 700px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+        z-index: 1;
+        padding: 30px;
+
+        left: 100%;
+        transform: translateX(-10%);
+      }
+
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+      }
+
+      .dropdown-column {
+        width: 48%;
+      }
+
+      .dropdown-column h3 {
+        color: #004499;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      .dropdown-column a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+      }
+
+      .dropdown-column a:hover {
+        color: #004499;
+        text-decoration: underline;
+      }
+      @media (max-width: 1448px) {
+        .dropdown-menu {
+          width: 900px;
+        }
+      }
+      @media (max-width: 768px) {
+        .dropdown-menu {
+          min-width: 90vw;
+          left: 0;
+          transform: none;
+        }
+
+        .dropdown-content {
+          flex-direction: column;
+        }
+
+        .dropdown-column {
+          width: 100%;
+        }
+      }
+    </style>
+
+    <nav class="navbar">
+      <div class="upper-nav">
+        <div class="upper-nav-container">
+          <div class="additional-links">
+            <a href="#">Infra Hub login</a>
+            <!-- <a href="blog.html">Blogs</a></li> -->
+            <!-- <a href="#">Fraud Alert</a> -->
+            <a href="media.html">Media Kit</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
+              >Careers</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="main-nav">
+        <div class="main-nav-container">
+          <img
+            src="logo-krupa.png"
+            alt="Reliance Industries Limited"
+            class="logo"
+          />
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Our Businesses</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-column">
+                    <h3>B2B Commerce</h3>
+                    <a href="EProcurement.html">E Procurement</a>
+
+                    <h3>Strategic Ventures</h3>
+                    <a href="Retail.html">Retail</a>
+                    <!-- <a href="software-sol.html">Software Solutions</a> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- <li></li> -->
+            <li><a href="about.html" class="dropdown-toggle">About Us</a></li>
+
+            <!-- <li class="dropdown">
+          <a href="about.html" class="dropdown-toggle">About Us</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-content">
+              <div class="dropdown-column">
+                <h3></h3>
+                <a href="owners.html">About the Founder</a>
+        <a href="board-of-directors.html">Leadership team</a>
+
+                <a href="media.html">Our Media Kit</a>
+              </div>
+            </div>
+          </div>
+        </li>  -->
+            <li><a href="owners.html">Founder's Message</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <!-- <li><a href="trade_hub.html">Trade Hub</a></li> -->
+            <!-- <li>
+      <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
+        >Careers</a
+      >
+    </li> -->
+            <!-- <li><a href="contact.html">Contact Us</a></li> -->
+          </ul>
+          <button class="menu-toggle">☰</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <button class="close-menu">✕</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="EProcurement.html">E Procurement</a></li>
+        <li><a href="Retail.html">Retail</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="owners.html">Founders's Message</a></li>
+        <!-- <li><a href="board-of-directors.html">Leadership team</a></li> -->
+        <li><a href="media.html">Our Media Kit</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <!-- <li><a href="trade_hub.html">Trade Hub</a></li> -->
+        <li>
+          <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
+            >Careers</a
+          >
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <!-- <div class="stock-info" style="color: #fff; padding: 20px">
+        NSE ₹ 2,953.15 (-3.25%)<br />
+        BSE ₹ 2,953.80 (-3.23%)
+      </div> -->
+    </div>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+      const upperNav = document.querySelector(".upper-nav");
+      const mainNav = document.querySelector(".main-nav");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const closeMenu = document.querySelector(".close-menu");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          upperNav.style.transform = "translateY(-100%)";
+          mainNav.style.backgroundColor = "rgba(255, 255, 255, 1)";
+          mainNav.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+          mainNav.style.position = "fixed";
+        } else {
+          upperNav.style.transform = "translateY(0)";
+          mainNav.style.backgroundColor = "rgba(255, 255, 255, 1)";
+          mainNav.style.boxShadow = "none";
+          mainNav.style.position = "relative";
+          4;
+          mainNav.style.width = "100%";
+          mainNav.style.top = "0px";
+        }
+      });
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+    </script>
+    <main>
+      <div class="container">
+        <h1>Privacy Policy</h1>
+
+        <p>Last updated: September 30, 2024</p>
+
+        <p>
+          Welcome to Your our Krupa corporation. We are committed to protecting
+          your personal information and your right to privacy. If you have any
+          questions or concerns about this privacy policy or our practices with
+          regard to your personal information, please contact us at
+          privacy@yourcompany.com.
+        </p>
+
+        <div class="highlight">
+          <p>
+            This Privacy Policy applies to all information collected through our
+            website, mobile application, and/or any related services, sales,
+            marketing, or events (collectively, the "Services").
+          </p>
+        </div>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Personal Information You Disclose to Us</h3>
+        <p>
+          We collect personal information that you voluntarily provide to us
+          when you register on the Services, express an interest in obtaining
+          information about us or our products and Services, when you
+          participate in activities on the Services, or otherwise when you
+          contact us.
+        </p>
+
+        <h3>1.2 Information Automatically Collected</h3>
+        <p>
+          We automatically collect certain information when you visit, use, or
+          navigate the Services. This information does not reveal your specific
+          identity but may include device and usage information, such as your IP
+          address, browser and device characteristics, operating system,
+          language preferences, referring URLs, device name, country, location,
+          information about how and when you use our Services, and other
+          technical information.
+        </p>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>
+          We use personal information collected via our Services for a variety
+          of business purposes described below. We process your personal
+          information for these purposes in reliance on our legitimate business
+          interests, in order to enter into or perform a contract with you, with
+          your consent, and/or for compliance with our legal obligations.
+        </p>
+
+        <ul>
+          <li>To facilitate account creation and logon process</li>
+          <li>To send administrative information to you</li>
+          <li>To send you marketing and promotional communications</li>
+          <li>To respond to user inquiries/offer support to users</li>
+          <li>To send you push notifications</li>
+        </ul>
+
+        <h2>3. Will Your Information Be Shared With Anyone?</h2>
+        <p>
+          We may process or share your data that we hold based on the following
+          legal basis:
+        </p>
+
+        <ul>
+          <li>
+            Consent: We may process your data if you have given us specific
+            consent to use your personal information for a specific purpose.
+          </li>
+          <li>
+            Legitimate Interests: We may process your data when it is reasonably
+            necessary to achieve our legitimate business interests.
+          </li>
+          <li>
+            Performance of a Contract: Where we have entered into a contract
+            with you, we may process your personal information to fulfill the
+            terms of our contract.
+          </li>
+          <li>
+            Legal Obligations: We may disclose your information where we are
+            legally required to do so in order to comply with applicable law,
+            governmental requests, a judicial proceeding, court order, or legal
+            process, such as in response to a court order or a subpoena.
+          </li>
+          <li>
+            Vital Interests: We may disclose your information where we believe
+            it is necessary to investigate, prevent, or take action regarding
+            potential violations of our policies, suspected fraud, situations
+            involving potential threats to the safety of any person and illegal
+            activities, or as evidence in litigation in which we are involved.
+          </li>
+        </ul>
+
+        <h2>4. Do We Use Cookies and Other Tracking Technologies?</h2>
+        <p>
+          We may use cookies and similar tracking technologies (like web beacons
+          and pixels) to access or store information. Specific information about
+          how we use such technologies and how you can refuse certain cookies is
+          set out in our Cookie Policy.
+        </p>
+
+        <h2>5. How Long Do We Keep Your Information?</h2>
+        <p>
+          We will only keep your personal information for as long as it is
+          necessary for the purposes set out in this privacy policy, unless a
+          longer retention period is required or permitted by law (such as tax,
+          accounting or other legal requirements). No purpose in this policy
+          will require us keeping your personal information for longer than the
+          period of time in which users have an account with us.
+        </p>
+
+        <h2>6. How Do We Keep Your Information Safe?</h2>
+        <p>
+          We have implemented appropriate technical and organizational security
+          measures designed to protect the security of any personal information
+          we process. However, despite our safeguards and efforts to secure your
+          information, no electronic transmission over the Internet or
+          information storage technology can be guaranteed to be 100% secure, so
+          we cannot promise or guarantee that hackers, cybercriminals, or other
+          unauthorized third parties will not be able to defeat our security,
+          and improperly collect, access, steal, or modify your information.
+        </p>
+
+        <h2>7. Do We Collect Information From Minors?</h2>
+        <p>
+          We do not knowingly solicit data from or market to children under 18
+          years of age. By using the Services, you represent that you are at
+          least 18 or that you are the parent or guardian of such a minor and
+          consent to such minor dependent's use of the Services. If we learn
+          that personal information from users less than 18 years of age has
+          been collected, we will deactivate the account and take reasonable
+          measures to promptly delete such data from our records.
+        </p>
+
+        <h2>8. Your Privacy Rights</h2>
+        <p>
+          In some regions (like the European Economic Area), you have certain
+          rights under applicable data protection laws. These may include the
+          right (i) to request access and obtain a copy of your personal
+          information, (ii) to request rectification or erasure; (iii) to
+          restrict the processing of your personal information; and (iv) if
+          applicable, to data portability. In certain circumstances, you may
+          also have the right to object to the processing of your personal
+          information.
+        </p>
+
+        <h2>9. Controls for Do-Not-Track Features</h2>
+        <p>
+          Most web browsers and some mobile operating systems and mobile
+          applications include a Do-Not-Track ("DNT") feature or setting you can
+          activate to signal your privacy preference not to have data about your
+          online browsing activities monitored and collected. At this stage, no
+          uniform technology standard for recognizing and implementing DNT
+          signals has been finalized. As such, we do not currently respond to
+          DNT browser signals or any other mechanism that automatically
+          communicates your choice not to be tracked online.
+        </p>
+
+        <h2>10. Do We Make Updates to This Policy?</h2>
+        <p>
+          We may update this privacy policy from time to time. The updated
+          version will be indicated by an updated "Revised" date and the updated
+          version will be effective as soon as it is accessible. If we make
+          material changes to this privacy policy, we may notify you either by
+          prominently posting a notice of such changes or by directly sending
+          you a notification. We encourage you to review this privacy policy
+          frequently to be informed of how we are protecting your information.
+        </p>
+
+        <h2>11. How Can You Contact Us About This Policy?</h2>
+        <p>
+          If you have questions or comments about this policy, you may email us
+          at privacy@yourcompany.com or by post to:
+        </p>
+
+        <p>
+          Your Company Name<br />
+          123 Privacy Street<br />
+          Anytown, ST 12345<br />
+          United States
+        </p>
+
+        <h2>12. Data Protection Officer</h2>
+        <p>
+          We have appointed a Data Protection Officer ("DPO") who is responsible
+          for overseeing questions in relation to this privacy policy. If you
+          have any questions about this privacy policy, including any requests
+          to exercise your legal rights, please contact our DPO using the
+          details set out below:
+        </p>
+
+        <p>
+          Full name of legal entity: Your Company Name<br />
+          Name of DPO: John Doe<br />
+          Email address: dpo@yourcompany.com<br />
+          Postal address: 123 Privacy Street, Anytown, ST 12345, United States
+        </p>
+
+        <h2>13. How to Make a Complaint</h2>
+        <p>
+          If you have a complaint about our use of your information, we would
+          prefer you to contact us directly in the first instance so that we can
+          address your complaint. However, you can also contact the Information
+          Commissioner's Office via their website at www.ico.org.uk/concerns or
+          write to them at:
+        </p>
+
+        <p>
+          Information Commissioner's Office<br />
+          Wycliffe House<br />
+          Water Lane<br />
+          Wilmslow<br />
+          Cheshire<br />
+          SK9 5AF
+        </p>
+
+        <h2>14. Specific Privacy Rights by Region</h2>
+
+        <h3>14.1 Privacy Notice for California Residents</h3>
+        <p>
+          If you are a California resident, you have specific rights regarding
+          your personal information under the California Consumer Privacy Act
+          (CCPA). This section describes your CCPA rights and explains how to
+          exercise those rights.
+        </p>
+
+        <h3>14.2 Privacy Notice for European Union Residents</h3>
+        <p>
+          If you are a resident of the European Union, you have certain data
+          protection rights under the General Data Protection Regulation (GDPR).
+          We aim to take reasonable steps to allow you to correct, amend,
+          delete, or limit the use of your Personal Information.
+        </p>
+
+        <table>
+          <tr>
+            <th>Right</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Right to Access</td>
+            <td>
+              You have the right to request copies of your personal information.
+            </td>
+          </tr>
+          <tr>
+            <td>Right to Rectification</td>
+            <td>
+              You have the right to request that we correct any information you
+              believe is inaccurate or complete any information you believe is
+              incomplete.
+            </td>
+          </tr>
+          <tr>
+            <td>Right to Erasure</td>
+            <td>
+              You have the right to request that we erase your personal
+              information, under certain conditions.
+            </td>
+          </tr>
+          <tr>
+            <td>Right to Restrict Processing</td>
+            <td>
+              You have the right to request that we restrict the processing of
+              your personal information, under certain conditions.
+            </td>
+          </tr>
+          <tr>
+            <td>Right to Object to Processing</td>
+            <td>
+              You have the right to object to our processing of your personal
+              information, under certain conditions.
+            </td>
+          </tr>
+          <tr>
+            <td>Right to Data Portability</td>
+            <td>
+              You have the right to request that we transfer the data that we
+              have collected to another organization, or directly to you, under
+              certain conditions.
+            </td>
+          </tr>
+        </table>
+
+        <h2>15. Glossary</h2>
+        <p>
+          To help you understand this policy better, here are some key terms and
+          their definitions:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Personal Data:</strong> Any information relating to an
+            identified or identifiable natural person.
+          </li>
+          <li>
+            <strong>Processing:</strong> Any operation performed on personal
+            data, whether or not by automated means.
+          </li>
+          <li>
+            <strong>Data Controller:</strong> The natural or legal person,
+            public authority, agency or other body which, alone or jointly with
+            others, determines the purposes and means of the processing of
+            personal data.
+          </li>
+          <li>
+            <strong>Data Processor:</strong> A natural or legal person, public
+            authority, agency or other body which processes personal data on
+            behalf of the controller.
+          </li>
+          <li>
+            <strong>Cookies:</strong> Small pieces of data stored on a user's
+            device by the web browser while browsing a website.
+          </li>
+        </ul>
+
+        <p class="last-updated">
+          This Privacy Policy was last updated on September 30, 2024.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <!-- Subscription Form -->
+      <div class="foot-head">
+        <div class="footer-subscribe">
+          <p>Subscribe to our news alerts</p>
+          <form>
+            <input type="email" placeholder="Email Id" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-container">
+        <!-- Footer Links Section -->
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Policies</h4>
+            <ul>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Cancellation Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Businesses</h4>
+            <ul>
+              <!-- <li><a href="#">New Energy & New Materials</a></li>
+              <li><a href="#">Digital Services-Jio</a></li> -->
+              <!-- <li><a href="#">Retail</a></li> -->
+              <li><a href="#">B2B commerce</a></li>
+              <li><a href="#">Retail</a></li>
+              <li><a href="http://krupainfrahub.com">Infra Hub</a></li>
+              <!-- Add more links here -->
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <!-- <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About</a></li> -->
+              <li><a href="blog.html">Blog</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
+                  >Careers</a
+                >
+              </li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="http://krupainfrahub.com">Infrahub</a></li>
+              <li><a href="https://yumzy.shop/">Yumzy.Shop</a></li>
+              <li><a href="https://avinyamall.com/">Avinyamall.com</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="#"
+                  >Krupa Corporation HQ 4th Floor, Sailok Complex, 6/1,<br />
+                  Arundelpet, Guntur, Andhra Pradesh 522002</a
+                >
+              </li>
+              <li><a href="#">+919059577879</a></li>
+              <li>
+                <a href="mailto:support@krupacorp.com">Support@krupacorp.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Krupa Corporation Private Limited. All rights reserved.</p>
+        <div class="policies">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Legal Notice</a>
+          <a href="#">Report Security Issue</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
