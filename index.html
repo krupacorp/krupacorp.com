@@ -39,7 +39,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
       header {
-        background-image: url(banner.png);
+        background-image: url(banner2.png);
         background-size: cover;
         background-position: center;
         height: 900px;
@@ -644,23 +644,31 @@
       const menuToggle = document.querySelector(".menu-toggle");
       const mobileMenu = document.querySelector(".mobile-menu");
       const closeMenu = document.querySelector(".close-menu");
+     // Add this to handle the initial state
+window.onload = () => {
+  if (window.scrollY > 50) {
+    upperNav.style.transform = "translateY(-100%)";
+    mainNav.style.backgroundColor = "rgba(255, 255, 255, 1)";
+    mainNav.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+    mainNav.style.position = "fixed";
+  }
+};
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-          upperNav.style.transform = "translateY(-100%)";
-          mainNav.style.backgroundColor = "rgba(255, 255, 255, 1)";
-          mainNav.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
-          mainNav.style.position = "fixed";
-        } else {
-          upperNav.style.transform = "translateY(0)";
-          mainNav.style.backgroundColor = "rgba(255, 255, 255, 1)";
-          mainNav.style.boxShadow = "none";
-          mainNav.style.position = "relative";
-          4;
-          mainNav.style.width = "100%";
-          mainNav.style.top = "0px";
-        }
-      });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    upperNav.style.transform = "translateY(-100%)";
+    mainNav.style.backgroundColor = "rgba(255, 255, 255, 1)";
+    mainNav.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+    mainNav.style.position = "fixed";
+  } else {
+    upperNav.style.transform = "translateY(0)";
+    mainNav.style.backgroundColor = "rgba(255, 255, 255, 1)";
+    mainNav.style.boxShadow = "none";
+    mainNav.style.position = "relative";
+    mainNav.style.width = "100%";
+    mainNav.style.top = "0px";
+  }
+});
 
       menuToggle.addEventListener("click", () => {
         mobileMenu.classList.add("active");
@@ -1142,7 +1150,7 @@
           }
         }
       </style>
-      <section class="yt-main">
+      <!-- <section class="yt-main">
         <div class="yt-section">
           <div class="yt-section-inner">
             <iframe
@@ -1158,7 +1166,7 @@
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <script>
         function reveal() {
@@ -1278,3 +1286,4 @@
     </footer>
   </body>
 </html>
+
